@@ -1,0 +1,11 @@
+  <h1>Weather Forecast</h1>
+
+  @for (forecast of forecasts; track forecast.date) {
+    <div class="weather-font">
+    <div>Date: {{ forecast.date }}</div>
+    <div>Temperature (°C): {{ forecast.temperatureC }}</div>
+    <div>Temperature (°F): {{ forecast.temperatureF }}</div>
+    <div>Summary: {{ forecast.summary }}</div>
+  </div>
+  <hr>
+  }
