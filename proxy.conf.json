@@ -1,0 +1,22 @@
+{
+    "/api/auth": {
+        "target": "http://localhost:6060",
+        "secure": false,
+        "pathRewrite": { "^/api/auth": "" }
+    },
+    "/api/inventory": {
+        "target": "http://localhost:7070",
+        "secure": false,
+        "pathRewrite": { "^/api/inventory": "" }
+    },
+    "/api/orders": {
+        "target": "http://localhost:5050",
+        "secure": false,
+        "pathRewrite": { "^/api/orders": "" }
+    },
+    "/api/notifications": {
+        "target": "http://localhost:4040",
+        "secure": false,
+        "pathRewrite": { "^/api/notifications": "" }
+    }
+}
