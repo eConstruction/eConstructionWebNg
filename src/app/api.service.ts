@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,19 +11,19 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   getAuthWeather(): Observable<any> {
-    return this.http.get('/api/v1/auth');
+    return this.http.get(`${environment.apiBaseUrl}/api/v1/auth`);
   }
 
   getInventoryWeather(): Observable<any> {
-    return this.http.get('/api/v1/inventory');
+    return this.http.get(`${environment.apiBaseUrl}/api/v1/inventory`);
   }
 
   getNotificationsWeather(): Observable<any> {
-    return this.http.get('/api/v1/notifications');
+    return this.http.get(`${environment.apiBaseUrl}/api/v1/notifications`);
   }
 
   getOrdersWeather(): Observable<any> {
-    return this.http.get('/api/v1/orders');
+    return this.http.get(`${environment.apiBaseUrl}/api/v1/orders`);
   }
 }
 
