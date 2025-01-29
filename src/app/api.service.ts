@@ -11,19 +11,19 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   getAuthWeather(): Observable<any> {
-    return this.http.get(`${environment.apiBaseUrl}/api/v1/auth`);
+    return this.http.get(`http://econstruction-service-auth.econstruction.svc.cluster.local:6060/api/v1/auth`);
   }
 
   getInventoryWeather(): Observable<any> {
-    return this.http.get(`${environment.apiBaseUrl}/api/v1/inventory`);
+    return this.http.get(`http://econstruction-inventory-service.econstruction.svc.cluster.local:7070/api/v1/inventory`);
   }
 
   getNotificationsWeather(): Observable<any> {
-    return this.http.get(`${environment.apiBaseUrl}/api/v1/notifications`);
+    return this.http.get(`http://econstruction-notification-service.econstruction.svc.cluster.local:4040/api/v1/notifications`);
   }
 
   getOrdersWeather(): Observable<any> {
-    return this.http.get(`${environment.apiBaseUrl}/api/v1/orders`);
+    return this.http.get(`http://econstruction-order-service.econstruction.svc.cluster.local:5050/api/v1/orders`);
   }
 }
 
